@@ -1,0 +1,66 @@
+Mood Journal Backend
+This backend application allows users to create accounts, record their moods, and track mood analytics over time.
+Users can view overall, monthly, and yearly mood reports, calculated as percentages, making it easy to visualize trends with graphs or pie charts on the frontend.
+
+🚀 Features
+User Authentication: Secure JWT‑based login and signup.
+
+CRUD Operations: Create, read, update, and delete journal entries.
+
+Mood Analytics:
+
+Overall Analytics – percentage breakdown of all moods recorded.
+
+Yearly Analytics – filter moods by year with percentage distribution.
+
+Monthly Analytics – filter moods by month (YYYY-MM) with percentage distribution.
+
+Secure Data Flow: Each user can only access their own entries.
+
+Database: Built with Sequelize ORM and MySQL.
+
+🛠 Tech Stack
+Backend Framework: Express.js
+
+Database: MySQL with Sequelize ORM
+
+Authentication: JWT (JSON Web Token)
+
+Migrations: Sequelize CLI for schema management
+
+📦 Installation
+Clone the repository:
+
+Install dependencies:
+
+bash
+npm install
+Configure your database in config/config.json or .env.
+
+Run migrations:
+
+bash
+npx sequelize-cli db:migrate
+Start the server:
+
+bash
+npm start
+🔑 API Routes
+Authentication
+POST /api/auth/signup – Register a new user
+
+POST /api/auth/login – Login and receive JWT
+
+Journal Entries
+POST /api/journel/entry – Create a new journal entry
+
+GET /api/journel/your-moods – Get all journal entries for the logged‑in user
+
+PUT /api/journel/update/:id – Update a journal entry
+
+Mood Analytics
+GET /api/mood-analytics/overall-analytics – Get overall mood percentages
+
+GET /api/mood-analytics/yearly-analytics/:year – Get yearly mood analytics
+
+GET /api/mood-analytics/monthly-analytics/:month – Get monthly mood analytics
