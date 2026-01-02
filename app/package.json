@@ -1,0 +1,1 @@
+{"name":"moodjournal","version":"1.0.0","description":"A mood journaling application","main":"server.js","scripts":{"start":"node server.js","dev":"nodemon server.js"},"author":"Bikash Yadav","license":"MIT","dependencies":{"bcrypt":"^6.0.0","dotenv":"^17.2.3","express":"^5.2.1","jsonwebtoken":"^9.0.3","mysql2":"^3.16.0","sequelize":"^6.37.7","sequelize-cli":"^6.6.3"}}
